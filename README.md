@@ -1,4 +1,4 @@
-# Project2_MergeSortInversionCounter
+# Project4_Kosaraju
 
 Steps to build
 prolog: though this step isn't strictly necessary to actually build the project it helps to make sure the user is in the right directory and all necessary configuration files have been downloaded correctly
@@ -29,7 +29,7 @@ Step 1:
 
   Cmake will configure for the build now. The last line of the dialog will tell you what directory the build cache files have been made in.
       
-      It will be ${root}/build/Release (or Debug) (CS3310-Project2_MergeSortInversionCount/build/Release)
+      It will be ${root}/build/Release (or Debug) (CS3310-Project4_Kosaraju/build/Release)
 
  Step 2:
    now run the following command
@@ -44,22 +44,12 @@ Step 1:
  Step 3:
    the built executables can now be run
 
-   To run the BruteForce program
+   To run the Kosaraju program
     
       on windows
-        .\BruteForce.exe <optional file-path> (file-path is to a file with new line deliminated list of integers, such as the provided FewNum.txt or LotsOfNum.txt - .\BruteForce.exe ../../LotsOfNum.txt)
+        .\Kosaraju.exe <optional debug indicator (-d)> <optional file-path> <optional output count num> (file-path is to a file with new line deliminated list of edges, such as those in TestFiles directory)
 
       on linux
-        ./BruteForce <optional file-path> (same as on windows for file-path option)
+        ./Kosaraju <optional debug indicator (-d)> <optional file-path> <optional output count num> (same as on windows for file-path option)  
 
-   To run the MergeSortCount program
-    
-      on windows
-        .\MergeSortCount.exe <optional file-path> (file-path is to a file with new line deliminated list of integers, such as the provided FewNum.txt or LotsOfNum.txt - ./BruteForce.exe ../../LotsOfNum.txt)
-
-      on linux
-        ./MergeSortCount <optional file-path> (same as on windows for file-path option)
-
-  Upon completion the program will report how long the executed method took in execution as well as the number of inversions counted
-
-  ** When the program is not supplied with a file to read from it will generate an array of random integers (pre configured in the Project2_InversionsCountConstDeff.h file - ARRAY_SIZE variable - to 100,000) and operate on that
+  Upon completion the program will report the top five (or optional count num) SCCs with the most elements
