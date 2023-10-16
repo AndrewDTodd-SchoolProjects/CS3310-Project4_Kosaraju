@@ -9,3 +9,6 @@ install_manifest.txt
 compile_commands.json
 CTestTestfile.cmake
 _deps
+/.vs
+/build/Debug
+/out/Ubuntu-22.04/build/linux-x64-debug
